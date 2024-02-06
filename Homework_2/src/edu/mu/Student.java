@@ -1,27 +1,24 @@
 package edu.mu;
-
+// add comment
 public class Student {
 	private int id;
 	private String name;
 	private double grade;
 	
-	private Student setStudent(int id, String name, double grade) {
-		Student stu = null;
-		stu.id = id;
-		stu.name = name;
-		stu.grade = grade;
-		return stu;
+	public Student(int id, String name, double grade) {
+		this.id = id;
+		this.name = name;
+		this.grade = grade;
 	}
 	
-	public String sToString() {
-		return "Name: " + this.name + "\nID: " + Integer.toString(this.id) + "\nGrade: " + Double.toString(this.grade) + "\n";
+	public String toString() {
+		return "Name: " + name + "\nID: " + Integer.toString(id) + "\nGrade: " + Double.toString(grade) + "\n";
 	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Student student1 = null;
-		student1.setStudent(0, "John", 3.0);
-		System.out.println(student1.sToString());
+		Student student1 = new Student(0, "John", 3.0);
+		System.out.println(student1.toString());
 	}
 
 }
