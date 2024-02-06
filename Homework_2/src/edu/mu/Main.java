@@ -7,5 +7,4 @@ public class Main {
 		Student student1 = new Student(0, "John", 3.0);
 		System.out.println(student1.toString());
 	}
-
 }
