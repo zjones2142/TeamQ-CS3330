@@ -7,6 +7,8 @@ public class StudentManager{
 		private Student[] students;
 		private int size;
 		
+		public StudentManager() {}
+		
 		public boolean readFromFile(String fileName) {
 		    try {
 		        File file = new File(fileName);
@@ -42,6 +44,8 @@ public class StudentManager{
 		            //add student to the array
 		            students[arraySize++] = new Student(id, name, grade);
 		        }
+		        
+		        this.size = arraySize;
 
 		        scanner.close();
 		        return true;
@@ -53,6 +57,7 @@ public class StudentManager{
 		        return false;
 		    }
 		}
+		
 			
 		public void displayStudents() {
 			if (size == 0) {
