@@ -12,6 +12,6 @@ public class Student {
 	}
 	
 	public String toString() {
-		return "Name: " + name + "\nID: " + Integer.toString(id) + "\nGrade: " + Double.toString(grade) + "\n";
+		return "  Name: " + name + "\n  ID: " + Integer.toString(id) + "\n  Grade: " + Double.toString(grade) + "\n";
 	}
 }
