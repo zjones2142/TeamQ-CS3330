@@ -14,4 +14,28 @@ public class Student {
 	public String toString() {
 		return "  Name: " + name + "\n  ID: " + Integer.toString(id) + "\n  Grade: " + Double.toString(grade) + "\n";
 	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getGrade() {
+		return grade;
+	}
+
+	public void setGrade(double grade) {
+		this.grade = grade;
+	}
 }
