@@ -21,15 +21,18 @@ public class StudentManager{
 		            String line = scanner.nextLine();
 		            String[] data = line.split(" "); //separately store student id, name, and grade
 
-		            if (data.length != 3) {
+		            if (data.length != 4) {
 		                System.err.println("Student data format is wrong in file: " + fileName);
 		                return false;
 		            }
 
 		            //initiate variables that will store student info
 		            int id = Integer.parseInt(data[0]);
-		            String name = data[1];
-		            double grade = Double.parseDouble(data[2]);
+		            String firstName = data[1];
+		            String lastName = data[2];
+		            double grade = Double.parseDouble(data[3]);
+		            
+		            String fullName = firstName + " " + lastName; // Combine first and last name
 
 		            if (arraySize == students.length) {
 		                //increase array length when it's full
@@ -42,7 +45,7 @@ public class StudentManager{
 		            }
 
 		            //add student to the array
-		            students[arraySize++] = new Student(id, name, grade);
+		            students[arraySize++] = new Student(id, firstName, lastName, grade);
 		        }
 		        
 		        this.size = arraySize;
@@ -106,5 +109,18 @@ public class StudentManager{
 		    System.out.println("Student with ID " + id + " not found.");
 		    return false;
 		}
-
+		public static void main(String[] args) {
+			// Instantiate StudentManager, perform operations based on the requirements.
+			StudentManager studentManager = new StudentManager();
+			// Read student data from a file and initialize Student objects.
+			boolean fileReadStatus = studentManager.readFromFile("studentData.txt");
+			// Display all students.
+			studentManager.displayStudents();
+			// Search for a student by ID.
+			boolean studentFound = studentManager.searchStudentById(101);
+			// Update the grade of a student by ID.
+			boolean studentGradeUpdateStatus = studentManager.updateStudentGradeById(102, 95);
+			// Display all students after the update.
+			studentManager.displayStudents();
+			}
 	}
