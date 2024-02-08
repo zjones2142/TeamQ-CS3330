@@ -109,7 +109,7 @@ public class StudentManager{
 		    System.out.println("Student with ID " + id + " not found.");
 		    return false;
 		}
-		public static void main(String[] args) {
+		/*public static void main(String[] args) {
 			// Instantiate StudentManager, perform operations based on the requirements.
 			StudentManager studentManager = new StudentManager();
 			// Read student data from a file and initialize Student objects.
@@ -122,5 +122,5 @@ public class StudentManager{
 			boolean studentGradeUpdateStatus = studentManager.updateStudentGradeById(102, 95);
 			// Display all students after the update.
 			studentManager.displayStudents();
-			}
+			}*/
 	}
