@@ -1,0 +1,2 @@
+module Homework_3 {
+}
